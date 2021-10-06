@@ -1,0 +1,18 @@
+jad gini pak naive bayes itu supervised  ML digunakan untuk mempreddiksi
+dari data lampau atau dikasih  jadi dia harus di kasih
+label dulu agar dia tau mana positif mana negatif,sehingga gk bisa di gunakan
+ pada tweet tapi bisa digunakan pada google review,nah cara kerja nya
+ di ml kita punya train set dan test set,jadi misal kita latih dulu data ini misal review pos
+  nah untuk prediksinya kita masukkin data dari lain misal jne,karna
+
+ untuuk tweet kita menggunakan subjectivy dan polairty,tetapi masalahnya pada data nodexl
+
+1.ada duplicate sebanyak 5870 di keyword pos
+2.ada bahsa selain indonesia
+3.ada error TypeError: expected string or bytes-like object yg mana ini kita harus baca
+11 untuk tau di mana masakahnya berdasarkan SO ada simbol yang cukup aneh
+,character atau angka juga bukan
+4.ada emoji di tweet yg mana gk bisa dihilangkan di python atau
+excel karna gk ada fungsi buat itu dan jika ada harus nulis satu satu
+dan unungnya kena error juga
+#http://www.unicode.org/Public/emoji/1.0//emoji-datatxt
