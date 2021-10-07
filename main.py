@@ -1,6 +1,7 @@
 import sklearn
 import pandas as pd
 import numpy
+import textblob
 import re
 from textblob import TextBlob
 from wordcloud import WordCloud
@@ -68,8 +69,12 @@ for i in range (0,sortedDF.shape[0]):
         print()
         j = j+1'''
 
+import plotly.express as px
+'''for i in range(0,df4.shape[0]):
+    py.scatter(x=df4['Polarity'][i],y=df4['Subjectivity'][i])
+fig.show()'''
 
-plt.figure(figsize=(10,8))
+
 for i in range(0,df4.shape[0]):
     plt.scatter(df4['Polarity'][i],df4['Subjectivity'][i],color='Red')
 plt.grid()
@@ -89,11 +94,16 @@ ntweetsc = ntweets.copy()
 ntweets = ntweetsc[['Tweet']]
 round((ntweets.shape[0] / df4.shape[0]) *100,1)
 
+nettweets = df4[df4.Analysis == 'Neutral']
+netweetsc = nettweets.copy()
+nettweets = nettweets[['Tweet']]
+round((ntweets.shape[0] / df4.shape[0]) *100,1)
+
+
 df4['Analysis'].value_counts()
 plt.title('Sentimen Analysis')
 plt.xlabel('Sentimen')
 plt.ylabel('Counts')
 df4['Analysis'].value_counts().plot(kind='bar')
 plt.show()
-
 
